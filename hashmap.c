@@ -83,7 +83,7 @@ Pair *searchMap(HashMap *map, char *key) {
     index2=(index2+1) % map->capacity;
     }
   if(is_equal(map->buckets[index2]->key,key)==1){
-    map->current=index2;
+    //map->current=index2;
     return map->buckets[index2];
   }
 	return NULL;
