@@ -208,3 +208,17 @@ hashmap.c:85:27: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 5d5ab9d
+Thu Apr  7 16:17:14 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:80:12: error: ‘return’ with a value, in function returning void [-Werror]
+     return NULL;
+            ^~~~
+hashmap.c:77:6: note: declared here
+ void eraseMap(HashMap *map, char *key) {
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ceeacfc
