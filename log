@@ -62,3 +62,16 @@ hashmap.c:86:24: error: array subscript is not an integer
                         ^
 Compilation failed
 d1eb031
+Thu Apr  7 16:02:30 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:82:61: error: array subscript is not an integer
+   while(map->buckets[index2]!=NULL && (is_equal(map->buckets[index]->key,key)!=1)){
+                                                             ^
+hashmap.c:83:21: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+     index=(index+1) % map->capacity;
+           ~~~~~~~~~ ^ ~~~~~~~~~~~~~
+Compilation failed
+5e3609f
