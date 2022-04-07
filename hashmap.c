@@ -75,14 +75,14 @@ HashMap *createMap(long capacity) {
 }
 
 void eraseMap(HashMap *map, char *key) {
-  long index3= hash(key,map->capacity);
-  if(map->buckets[index3]==NULL || map->buckets[index3]->key==NULL){
+  long index= hash(key,map->capacity);
+  if(map->buckets[index]==NULL || map->buckets[index]->key==NULL){
     return NULL;
   }
-  while(map->buckets[index3]!=NULL && (is_equal(map->buckets[index3]->key,key)!=1)){
-    index2=(index3+1) % map->capacity;
+  while(map->buckets[index]!=NULL && (is_equal(map->buckets[index]->key,key)!=1)){
+    index=(index+1) % map->capacity;
     }
-  map->buckets[index3]->key==NULL;
+  map->buckets[index]->key==NULL;
   map->size--;
 }
 
