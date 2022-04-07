@@ -116,3 +116,21 @@ hashmap.c:92:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 fab589f
+Thu Apr  7 16:08:15 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:82:62: error: expected expression before ‘=’ token
+   if(map->buckets[index2]==NULL || map->buckets[index2]->key)=NULL){
+                                                              ^
+hashmap.c:82:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if(map->buckets[index2]==NULL || map->buckets[index2]->key)=NULL){
+   ^~
+hashmap.c:82:67: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if(map->buckets[index2]==NULL || map->buckets[index2]->key)=NULL){
+                                                                   ^
+hashmap.c:82:67: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+311834d
