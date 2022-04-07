@@ -261,3 +261,8 @@ hashmap.c:77:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 7cbd2f3
+Thu Apr  7 19:29:15 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+e88928b
