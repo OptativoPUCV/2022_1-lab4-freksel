@@ -247,3 +247,17 @@ Thu Apr  7 19:12:01 UTC 2022:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 a2ed57f
+Thu Apr  7 19:27:20 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:80:13: error: ‘return’ with a value, in function returning void [-Werror]
+      return NULL;
+             ^~~~
+hashmap.c:77:6: note: declared here
+ void eraseMap(HashMap *map, char *key) {
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7cbd2f3
