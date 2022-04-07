@@ -8,3 +8,19 @@ Thu Apr  7 15:14:11 UTC 2022:
  tests:  1|5
 total_score: 10/70
 f28a5c2
+Thu Apr  7 15:36:09 UTC 2022: 
+ hashmap.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:8: error: too few arguments to function ‘is_equal’
+     if(is_equal(map->buckets[index]->key)==1) return;
+        ^~~~~~~~
+hashmap.c:34:5: note: declared here
+ int is_equal(void *key1, void *key2) {
+     ^~~~~~~~
+hashmap.c:53:48: error: expected statement before ‘]’ token
+     map->buckets[index]= createPair(key,value);]
+                                                ^
+Compilation failed
+f9dd4f9
