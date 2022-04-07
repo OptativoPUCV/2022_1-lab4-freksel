@@ -227,3 +227,18 @@ Thu Apr  7 16:18:03 UTC 2022:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 beeb535
+Thu Apr  7 19:11:19 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:80:13: error: expected expression before ‘void’
+      return void;
+             ^~~~
+hashmap.c:80:13: error: ‘return’ with a value, in function returning void [-Werror]
+hashmap.c:77:6: note: declared here
+ void eraseMap(HashMap *map, char *key) {
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+185e95f
