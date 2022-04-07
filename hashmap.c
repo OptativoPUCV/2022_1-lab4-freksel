@@ -50,7 +50,7 @@ void insertMap(HashMap *map, char *key, void *value) {
     map->buckets[index]->value=value;
     }
     else{
-    map->buckets[index]= createPair(key,value);]
+    map->buckets[index]= createPair(key,value);
     }
     map->size++;
   if((double)map->size/(double) map->capacity>0.75){

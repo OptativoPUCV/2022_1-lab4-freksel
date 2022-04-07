@@ -24,3 +24,16 @@ hashmap.c:53:48: error: expected statement before ‘]’ token
                                                 ^
 Compilation failed
 f9dd4f9
+Thu Apr  7 15:36:23 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:8: error: too few arguments to function ‘is_equal’
+     if(is_equal(map->buckets[index]->key)==1) return;
+        ^~~~~~~~
+hashmap.c:34:5: note: declared here
+ int is_equal(void *key1, void *key2) {
+     ^~~~~~~~
+Compilation failed
+0c23c34
