@@ -152,3 +152,14 @@ hashmap.c:82:68: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 2c52d08
+Thu Apr  7 16:08:34 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+d25ab11
