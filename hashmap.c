@@ -75,6 +75,15 @@ HashMap *createMap(long capacity) {
 }
 
 void eraseMap(HashMap *map, char *key) {
+  long index3= hash(key,map->capacity);
+  if(map->buckets[index3]==NULL || map->buckets[index3]->key==NULL){
+    return NULL;
+  }
+  while(map->buckets[index3]!=NULL && (is_equal(map->buckets[index3]->key,key)!=1)){
+    index2=(index3+1) % map->capacity;
+    }
+  map->buckets[index3]->key==NULL;
+  map->size--;
 }
 
 Pair *searchMap(HashMap *map, char *key) {

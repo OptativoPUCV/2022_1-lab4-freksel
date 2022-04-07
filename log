@@ -169,3 +169,25 @@ Thu Apr  7 16:10:16 UTC 2022:
  tests:  8|3
 total_score: 40/70
 113eea1
+Thu Apr  7 16:16:00 UTC 2022: 
+ hashmap.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:80:12: error: ‘return’ with a value, in function returning void [-Werror]
+     return NULL;
+            ^~~~
+hashmap.c:77:6: note: declared here
+ void eraseMap(HashMap *map, char *key) {
+      ^~~~~~~~
+hashmap.c:83:5: error: ‘index2’ undeclared (first use in this function); did you mean ‘index3’?
+     index2=(index3+1) % map->capacity;
+     ^~~~~~
+     index3
+hashmap.c:83:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:85:28: error: statement with no effect [-Werror=unused-value]
+   map->buckets[index3]->key==NULL;
+                            ^
+cc1: all warnings being treated as errors
+Compilation failed
+011bcdf
