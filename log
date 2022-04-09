@@ -332,3 +332,14 @@ hashmap.c:111:9: error: return makes pointer from integer without a cast [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 aaa0ec6
+Sat Apr  9 20:55:06 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:111:24: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+  return map->buckets[i]->key;
+         ~~~~~~~~~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+300a458
