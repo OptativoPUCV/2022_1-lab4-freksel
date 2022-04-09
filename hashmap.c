@@ -116,7 +116,7 @@ int i;
 i=map->current;
 i=(i+1)% map->capacity;
 while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
-    if(map->current == map->capacity){
+    if(map->current >= map->capacity){
     return NULL;
   }
   i=(i+1)% map->capacity;
