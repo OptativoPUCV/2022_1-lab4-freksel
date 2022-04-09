@@ -119,7 +119,7 @@ if(map->current == map->capacity){
   return NULL;
 }
 while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
-  if(map->current == map->capacity){
+  if(map->current == NULL){
   return NULL;
   }
   i=(i+1)% map->capacity;

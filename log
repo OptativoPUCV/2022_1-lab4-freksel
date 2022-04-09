@@ -755,3 +755,14 @@ Sat Apr  9 22:56:13 UTC 2022:
  tests:  15|2
 total_score: 50/70
 d951af6
+Sat Apr  9 23:23:20 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:122:19: error: comparison between pointer and integer [-Werror]
+   if(map->current == NULL){
+                   ^~
+cc1: all warnings being treated as errors
+Compilation failed
+2697423
