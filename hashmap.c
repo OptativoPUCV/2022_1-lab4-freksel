@@ -103,7 +103,12 @@ Pair *searchMap(HashMap *map, char *key) {
 }
 
 Pair *firstMap(HashMap *map) {
-	return NULL;
+  int i=0;
+  while(map->buckets[i]==NULL){
+    i++;
+  }
+  map->current=i;
+	return map->current;
 }
 
 Pair *nextMap(HashMap *map) {
