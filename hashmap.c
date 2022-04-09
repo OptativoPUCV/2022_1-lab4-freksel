@@ -104,7 +104,7 @@ Pair *searchMap(HashMap *map, char *key) {
 
 Pair *firstMap(HashMap *map) {
   int i=0;
-  while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
+  while(map->buckets[i]==NULL){
     i=(i+1) % map->capacity;
   }
   map->current=i;
