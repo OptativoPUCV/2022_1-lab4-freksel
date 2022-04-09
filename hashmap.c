@@ -114,11 +114,11 @@ Pair *firstMap(HashMap *map) {
 Pair *nextMap(HashMap *map) {
 int i;
 i=map->current;
-  if(map->current == map->capacity){
-    return NULL;
-  }
 i=(i+1)% map->capacity;
 while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
+    if(map->current == map->capacity){
+    return NULL;
+  }
   i=(i+1)% map->capacity;
 }
 map->current=i;
