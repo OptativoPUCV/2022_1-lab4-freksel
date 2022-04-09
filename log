@@ -565,3 +565,47 @@ hashmap.c:120:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 9f57ae9
+Sat Apr  9 21:57:19 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:107:21: error: array subscript is not an integer
+   while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
+                     ^
+hashmap.c:107:46: error: array subscript is not an integer
+   while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
+                                              ^
+hashmap.c:108:13: error: invalid operands to binary % (have ‘int *’ and ‘long int’)
+     i=(i+1) % map->capacity;
+       ~~~~~ ^ ~~~~~~~~~~~~~
+hashmap.c:110:15: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   map->current=i;
+               ^
+hashmap.c:111:21: error: array subscript is not an integer
+  return map->buckets[i];
+                     ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:116:2: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+ i=map->current;
+  ^
+hashmap.c:117:8: error: invalid operands to binary % (have ‘int *’ and ‘long int’)
+ i=(i+1)% map->capacity;
+   ~~~~~^ ~~~~~~~~~~~~~
+hashmap.c:118:13: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+ map->current=i;
+             ^
+hashmap.c:119:20: error: array subscript is not an integer
+ return map->buckets[i];
+                    ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:112:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+4f3a798
