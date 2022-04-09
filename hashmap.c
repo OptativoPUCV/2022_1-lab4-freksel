@@ -115,10 +115,13 @@ Pair *nextMap(HashMap *map) {
 int i;
 i=map->current;
 i=(i+1)% map->capacity;
-if(map->current >= map->capacity){
+if(map->current == map->capacity){
   return NULL;
 }
 while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
+  if(map->current == map->capacity){
+  return NULL;
+  }
   i=(i+1)% map->capacity;
 }
 map->current=i;
