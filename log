@@ -496,3 +496,26 @@ hashmap.c:120:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 3767648
+Sat Apr  9 21:55:15 UTC 2022: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:118:2: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+ i=map->current;
+  ^
+hashmap.c:119:8: error: invalid operands to binary % (have ‘int *’ and ‘long int’)
+ i=(i+1)% map->capacity;
+   ~~~~~^ ~~~~~~~~~~~~~
+hashmap.c:120:13: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+ map->current=i;
+             ^
+hashmap.c:121:20: error: array subscript is not an integer
+ return map->buckets[i];
+                    ^
+hashmap.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+f5e1fb6
