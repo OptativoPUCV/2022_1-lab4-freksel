@@ -112,7 +112,7 @@ Pair *firstMap(HashMap *map) {
 }
 
 Pair *nextMap(HashMap *map) {
-int* i;
+int i;
 i=map->current;
 i=(i+1)% map->capacity;
 map->current=i;
