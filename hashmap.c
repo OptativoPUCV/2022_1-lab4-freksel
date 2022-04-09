@@ -108,7 +108,7 @@ Pair *firstMap(HashMap *map) {
     i=(i+1) % map->capacity;
   }
   map->current=i;
-	return map->buckets[i]->key;
+	return map->buckets[i];
 }
 
 Pair *nextMap(HashMap *map) {

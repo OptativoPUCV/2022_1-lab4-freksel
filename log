@@ -354,3 +354,9 @@ hashmap.c:111:24: error: return from incompatible pointer type [-Werror=incompat
 cc1: all warnings being treated as errors
 Compilation failed
 809089a
+Sat Apr  9 21:00:03 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|2
+total_score: 50/70
+3006494
