@@ -108,7 +108,7 @@ Pair *firstMap(HashMap *map) {
     i++;
   }
   map->current=i;
-	return map->buckets[i]->key;
+	return *map->buckets[i]->key;
 }
 
 Pair *nextMap(HashMap *map) {
