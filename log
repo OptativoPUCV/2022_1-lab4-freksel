@@ -806,3 +806,14 @@ hashmap.c:118:17: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 3370879
+Sun Apr 10 00:14:36 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:118:9: error: ‘HashMap {aka struct HashMap}’ has no member named ‘Buckets’; did you mean ‘buckets’?
+ if(map->Buckets[i] == NULL){
+         ^~~~~~~
+         buckets
+Compilation failed
+6cde89e
