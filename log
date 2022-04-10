@@ -839,3 +839,14 @@ Sun Apr 10 17:00:43 UTC 2022:
  tests:  16|1
 total_score: 60/70
 b7a47b8
+Sun Apr 10 23:57:21 UTC 2022: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:64:9: error: unused variable ‘M1’ [-Werror=unused-variable]
+   char* M1[100];
+         ^~
+cc1: all warnings being treated as errors
+Compilation failed
+b1a8491
