@@ -61,7 +61,6 @@ void insertMap(HashMap *map, char *key, void *value) {
 void enlarge(HashMap *map) {
   int Mo;
   int i=0;
-  char* M1[100];
   Pair** aux=map->buckets;
   Mo=map->capacity*2;
   HashMap *m2 = (HashMap*)malloc(sizeof(HashMap));
