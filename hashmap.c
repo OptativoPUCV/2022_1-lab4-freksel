@@ -118,6 +118,9 @@ i=(i+1)% map->capacity;
 while(map->buckets[i]==NULL || map->buckets[i]->key==NULL){
   i=(i+1)% map->capacity;
 }
+if(i==0){
+  return NULL;
+}
 map->current=i;
 return map->buckets[i];
 }
