@@ -71,7 +71,7 @@ void enlarge(HashMap *map) {
   while(i<m2->capacity/2){
     insertMap(m2,(m2->buckets[i]->key),aux);
     i++;
-    hash(map->buckets[i]->key,m2->capacity);
+    hash(m2->buckets[i]->key,m2->capacity);
     }
 	enlarge_called = 1; // no borrar (testing purposes)
 }
