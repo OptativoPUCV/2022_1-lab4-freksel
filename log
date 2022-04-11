@@ -865,3 +865,17 @@ Mon Apr 11 00:33:28 UTC 2022:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 41e9668
+Mon Apr 11 00:37:21 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:27: error: too few arguments to function ‘calloc’
+   HashMap *m2 = (HashMap*)calloc(sizeof(HashMap));
+                           ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+Compilation failed
+72faf7b

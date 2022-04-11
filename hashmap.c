@@ -63,7 +63,7 @@ void enlarge(HashMap *map) {
   int i=0;
   Pair** aux=map->buckets;
   Mo=map->capacity*2;
-  HashMap *m2 = (HashMap*)malloc(sizeof(HashMap));
+  HashMap *m2 = (HashMap*)calloc(sizeof(HashMap));
   m2->size=0;
   m2->capacity=Mo;
   m2->current=-1;
