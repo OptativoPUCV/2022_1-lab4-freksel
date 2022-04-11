@@ -73,7 +73,6 @@ void enlarge(HashMap *map) {
       insertMap(m2,(map->buckets[i]->key),aux[i]->value);
       m2->size++;
     }
-    printf("%s",m2->buckets[i]->key);
     i++;
     }
 	enlarge_called = 1; // no borrar (testing purposes)
