@@ -68,7 +68,7 @@ void enlarge(HashMap *map) {
   m2->capacity=Mo;
   m2->current=-1;
   m2->buckets =(Pair **)calloc(Mo, sizeof(Pair *));
-  while(i<m2->capacity/2){
+  while(i<map->capacity){
     insertMap(m2,(map->buckets[i]->key),aux[i]->value);
     i = (1+i) % map->capacity;
     }
