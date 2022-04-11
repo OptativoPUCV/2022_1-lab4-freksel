@@ -70,7 +70,7 @@ void enlarge(HashMap *map) {
   m2->buckets =(Pair **)calloc(Mo, sizeof(Pair *));
   while(i<map->capacity){
     //if(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
-      insertMap(m2,(map->buckets[i]->key),map->buckets[i]->value);
+      insertMap(m2,(aux[i]->key),aux[i]->value);
       m2->size++;
     //}
     i++;
