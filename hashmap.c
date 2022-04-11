@@ -73,8 +73,9 @@ void enlarge(HashMap *map) {
       insertMap(m2,(aux[i]->key),aux[i]->value);
       m2->size++;
     //}
-    i++;
-    hash(m2->buckets[i]->key,m2->capacity);
+    i=(i+1) % map->capacity;
+    //i++;
+    //hash(m2->buckets[i]->key,m2->capacity);
     }
 	enlarge_called = 1; // no borrar (testing purposes)
 }
