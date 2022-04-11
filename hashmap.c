@@ -69,10 +69,10 @@ void enlarge(HashMap *map) {
   m2->current=-1;
   m2->buckets =(Pair **)calloc(Mo, sizeof(Pair *));
   while(i<map->capacity){
-    if(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
+    //if(map->buckets[i]!=NULL && map->buckets[i]->key!=NULL){
       insertMap(m2,(map->buckets[i]->key),aux[i]->value);
       m2->size++;
-    }
+    //}
     i++;
     }
 	enlarge_called = 1; // no borrar (testing purposes)
