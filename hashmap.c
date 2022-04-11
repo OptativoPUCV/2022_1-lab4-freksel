@@ -74,6 +74,7 @@ void enlarge(HashMap *map) {
       m2->size++;
     //}
     i++;
+    hash(m2->buckets[i]->key,m2->capacity);
     }
 	enlarge_called = 1; // no borrar (testing purposes)
 }
