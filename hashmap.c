@@ -70,8 +70,7 @@ void enlarge(HashMap *map) {
   m2->buckets =(Pair **)calloc(Mo, sizeof(Pair *));
   while(i<m2->capacity/2){
     insertMap(m2,(map->buckets[i]->key),aux[i]->value);
-    i++;
-    hash(m2->buckets[i]->key,m2->capacity);
+    i = (1+i) % map->capacity;
     }
 	enlarge_called = 1; // no borrar (testing purposes)
 }
