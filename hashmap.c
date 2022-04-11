@@ -67,11 +67,10 @@ void enlarge(HashMap *map) {
   m2->size=0;
   m2->capacity=Mo;
   m2->current=-1;
-  
   while(i<m2->capacity/2){
     insertMap(m2,(map->buckets[i]->key),aux[i]->value);
     i++;
-    hash(m2->buckets[i]->key,m2->capacity);
+    hash(map->buckets[i]->key,m2->capacity);
     }
 	enlarge_called = 1; // no borrar (testing purposes)
 }
